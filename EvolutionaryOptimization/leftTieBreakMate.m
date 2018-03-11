@@ -82,4 +82,5 @@ for i =1:mateDimension
       end
     end
   end
-end 
+y = offspring;
+end
