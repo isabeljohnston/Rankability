@@ -67,7 +67,7 @@ for i =1:mateDimension
           openPositions = find(~offspring);
           closestPosition = openPositions(1);
           for k = 1:length(openPositions)
-            if abs(openPositions(k) - ((i+j)/2)) < abs(closestPosition - ((i+j)/2))
+            if abs(openPositions(k) - desiredPosition) < abs(closestPosition - desiredPosition)
               closestPosition = openPositions(k);
             end
           end
