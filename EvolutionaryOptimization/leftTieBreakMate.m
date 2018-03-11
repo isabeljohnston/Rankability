@@ -1,9 +1,5 @@
 function y = leftTieBreakMate(leftMate, rightMate)
 
-%Mate Rankings.
-leftMate = [2; 4; 1; 3];
-rightMate = [4; 1; 3; 2];
-
 %Information needed to loop through mates.
 mateDimension = length(leftMate);
 usedLeftIndices = zeros(mateDimension, 1);
