@@ -1,5 +1,4 @@
 %Evolutionary Optimization 1.0
-%tealuu is silly
 tic
 D = [1,1,1,1,1,1;
      1,0,1,1,0,1;
