@@ -6,21 +6,20 @@ D = [1,1,1,1,1,1;
      1,0,1,0,1,0;
      0,1,1,0,0,0;
      1,0,0,1,1,0];
- n=6
+
 %Collect information about data
 [numRows, numCols] = size(D);
 perm = [1:numRows];
-%maxK = numRows*(numRows - 1)/2
 maxP = factorial(numRows);
-n=6;
+%n=6;
+sizePopulation = 10;
+
 %First: Generate a population (i.e. generate rankings)
 %NOTE: There are numRows! possible rankings
-%FIX: Start with a more diverse firstGen
-
 %Write a for loop using randperm for get a more random initial population
 firstGen = [];
-for i = 1:numRows*10
-    perm = nextperm(perm, numRows);
+for i = 1:sizePopulation
+    perm = randperm(numRows);
     firstGen = [firstGen perm'];
 end
 firstGen;
