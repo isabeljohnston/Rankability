@@ -35,3 +35,5 @@ function y = enumeratingSymmetries(D)
         end
     end
   end
+y = A
+end
