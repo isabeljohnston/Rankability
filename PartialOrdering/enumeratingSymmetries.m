@@ -16,20 +16,20 @@ function y = enumeratingSymmetries(D)
     end
   end
 
-  numOfSymmetricPairs = numOfSymmetricElements/2
+  numOfSymmetricPairs = numOfSymmetricElements/2;
 
   %symmetryMatrix is a binary matrix where a 1 reprensents the presence of
   %a symmetric element.
-  [rowIndex, colIndex] = find(symmetryMatrix)
+  [rowIndex, colIndex] = find(symmetryMatrix);
 
   %create bit strings to determine which elements to set to zero.
-  bitStrings = strcat(dec2bin(0:2^(numOfSymmetricPairs)-1), dec2bin(2^(numOfSymmetricPairs) - 1 : -1: 0))
+  bitStrings = strcat(dec2bin(0:2^(numOfSymmetricPairs)-1), dec2bin(2^(numOfSymmetricPairs) - 1 : -1: 0));
 
   if numOfSymmetricPairs > 0
-      A = cell(1,length(bitStrings))
+      A = cell(1,length(bitStrings));
       for k = 1:length(bitStrings)
         A{k} = D;
-        bitString = bitStrings(k,:)
+        bitString = bitStrings(k,:);
         for i = 1:length(rowIndex)
             if bitString(i) == '0'
               A{k}(rowIndex(i),colIndex(i)) = 0;

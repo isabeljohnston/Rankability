@@ -3,7 +3,7 @@ function y = countingSymmetries(D)
   dim = size(D, 1);
 
   %Initialize numOfSymmetricElements
-  numOfSymmetricElements = 0
+  numOfSymmetricElements = 0;
 
   for i = 1:dim
     for j = 1:dim
@@ -12,5 +12,5 @@ function y = countingSymmetries(D)
       end
     end
   end
-y = numOfSymmetricElements/2
+y = numOfSymmetricElements/2;
 end
