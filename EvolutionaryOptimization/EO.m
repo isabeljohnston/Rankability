@@ -43,6 +43,8 @@ firstGenFit = [];
 
 iteration = 1;
 kArray = [];
+previousk= 10^10
+k=min(firstGenFit)
 while k < previousk || iteration <15
   if iteration == 1
     previousk = 100000000;
@@ -75,5 +77,8 @@ while k < previousk || iteration <15
   k = min(newFitArray);
   firstGenFit = newFitArray';
   firstGen = offspringArray;
+  iteration=iteration+1;
 end
+offspringArray
+k
 toc
